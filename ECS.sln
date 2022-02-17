@@ -5,9 +5,12 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy", "ECS.Legacy\ECS.Legacy.csproj", "{04BB7A61-C926-4654-A911-EA7EAE974326}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Legacy.Test", "ECS.Legacy.Test\ECS.Legacy.Test.csproj", "{DEEF40AE-4318-45BB-8489-27D2B0C3DC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy.Test", "ECS.Legacy.Test\ECS.Legacy.Test.csproj", "{DEEF40AE-4318-45BB-8489-27D2B0C3DC78}"
+	ProjectSection(ProjectDependencies) = postProject
+		{72049F60-F7E8-4860-BBD1-629567AF7F40} = {72049F60-F7E8-4860-BBD1-629567AF7F40}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Refactored", "ECS.Refactored\ECS.Refactored.csproj", "{72049F60-F7E8-4860-BBD1-629567AF7F40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Refactored", "ECS.Refactored\ECS.Refactored.csproj", "{72049F60-F7E8-4860-BBD1-629567AF7F40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
