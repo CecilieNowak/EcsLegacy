@@ -41,6 +41,7 @@ namespace ECS.Legacy
             return _tempSensor.GetTemp();
         }
 
+        //Selvtest på "hw-modul" og få resultat
         public bool RunSelfTest()
         {
             return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
