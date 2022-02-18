@@ -26,7 +26,7 @@ namespace ECSRefactoredTest
 
         //Navn til testmetode: [UnitOfWorkName]_[ScenarioUnderTest]_[ExpectedBehavior]
         [Test]
-        public void ECS_TempSensorReturns22_HeaterTurnOn() //Vi tester om heateren tænder, hvis TempSensor returnerer 22
+        public void RegulateMethod_TempSensorReturns22_HeaterTurnOn() //Vi tester om heateren tænder, hvis TempSensor returnerer 22
         {
             //arrange
             _fakeTempSensor.Temp = 22;
@@ -37,6 +37,19 @@ namespace ECSRefactoredTest
 
             //assert
             Assert.That(_fakeHeater.TurnOnCounter, Is.EqualTo(1));
+
+        }
+
+        [Test]
+        public void GetThresholdMethod_ThresholdIs23_MethodReturns23() //Vi tester her om metoden returnerer 23, hvis threshold er sat til 23
+        {
+            //arrange - arrange sker i setup linje 17. Her sættes threshold til 23
+
+            //act
+            var testThreshold = _uut.GetThreshold();
+
+            //assert
+            Assert.That(testThreshold, Is.EqualTo(23));
 
         }
     }
