@@ -19,7 +19,7 @@ namespace ECSLegacy
         {
             var t = _tempSensor.GetTemp();
             Console.WriteLine($"Temperatur measured was {t}");
-            if (t < _threshold)
+            if (t < _threshold) 
                 _heater.TurnOn();
             else
                 _heater.TurnOff();
