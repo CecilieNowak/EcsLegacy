@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy", "ECS.Legacy\ECS.Legacy.csproj", "{04BB7A61-C926-4654-A911-EA7EAE974326}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECSLegacy", "ECS.Legacy\ECSLegacy.csproj", "{04BB7A61-C926-4654-A911-EA7EAE974326}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy.Test", "ECS.Legacy.Test\ECS.Legacy.Test.csproj", "{DEEF40AE-4318-45BB-8489-27D2B0C3DC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECSRefactoredTest", "ECS.Legacy.Test\ECSRefactoredTest.csproj", "{DEEF40AE-4318-45BB-8489-27D2B0C3DC78}"
 	ProjectSection(ProjectDependencies) = postProject
 		{72049F60-F7E8-4860-BBD1-629567AF7F40} = {72049F60-F7E8-4860-BBD1-629567AF7F40}
 	EndProjectSection

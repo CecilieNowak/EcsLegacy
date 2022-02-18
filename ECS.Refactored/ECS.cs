@@ -1,28 +1,30 @@
 ﻿using System;
 
-namespace ECS.Refactored
+namespace ECSRefactored
 {
     public class ECS
     {
         private int _threshold;
-        private readonly TempSensor _tempSensor;
-        private readonly Heater _heater;
+        
+        public IHeater Heater { private get; set; } //Property injection
+        public ITempSensor TempSensor { private get; set; } //Property injection
+       
 
         public ECS(int thr)
         {
             SetThreshold(thr);
-            _tempSensor = new TempSensor();
-            _heater = new Heater();
+            TempSensor = new TempSensor();
+            Heater = new Heater();
         }
 
         public void Regulate()
         {
-            var t = _tempSensor.GetTemp();
+            var t = TempSensor.GetTemp();
             Console.WriteLine($"Temperatur measured was {t}");
             if (t < _threshold)
-                _heater.TurnOn();
+                Heater.TurnOn();
             else
-                _heater.TurnOff();
+                Heater.TurnOff();
 
         }
 
@@ -38,12 +40,12 @@ namespace ECS.Refactored
 
         public int GetCurTemp()
         {
-            return _tempSensor.GetTemp();
+            return TempSensor.GetTemp();
         }
 
         public bool RunSelfTest()
         {
-            return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
+            return TempSensor.RunSelfTest() && Heater.RunSelfTest();
         }
     }
 }
