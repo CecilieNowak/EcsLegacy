@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ECS.Refactored;
+using ECSRefactored;
 
-namespace ECS.Legacy.Test
+namespace ECSRefactoredTest
 {
-   public class FakeTempSensor: ITempSensor
-
-    {
+   public class FakeTempSensor : ITempSensor
+   {
+       public int Temp { get; set; }
         public int GetTemp()
         {
-            return 20;
+            return Temp;
         }
 
         public bool RunSelfTest()

@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace ECS.Refactored
+namespace ECSRefactored
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
