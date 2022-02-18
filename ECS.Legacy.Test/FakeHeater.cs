@@ -8,7 +8,8 @@ namespace ECSRefactoredTest
    public class FakeHeater : IHeater
 
    {
-       public int TurnOnCounter { get; set; } 
+       public int TurnOnCounter { get; set; }
+       public int TurnOffCounter { get; set; }
         public void TurnOn()
         {
             System.Console.WriteLine("FakeHeater is on");
@@ -18,6 +19,7 @@ namespace ECSRefactoredTest
         public void TurnOff()
         {
             System.Console.WriteLine("FakeHeater is off");
+            TurnOffCounter++;
         }
 
         public bool RunSelfTest()

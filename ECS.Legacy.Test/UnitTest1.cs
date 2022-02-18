@@ -75,5 +75,21 @@ namespace ECSRefactoredTest
 
             Assert.That(testRunSelfTest, Is.True);
         }
+
+        [Test]
+        public void RegulateMethod_TempSensorReturns23_HeaterTurnOff()
+        {
+            //arrange
+            _fakeTempSensor.Temp = 23;
+           
+
+            //act
+            _uut.Regulate();
+
+
+            //assert
+            Assert.That(_fakeHeater.TurnOffCounter, Is.EqualTo(1));
+        }
+
     }
 }
