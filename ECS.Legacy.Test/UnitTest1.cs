@@ -41,6 +41,19 @@ namespace ECSRefactoredTest
         }
 
         [Test]
+        public void SetThresholdMethod_ThresholdIsSetTo14_GetThresholdMethodReturns14() //Vi tester om threshold bliver sat til 14, ved brug af Get-metoden (da threshold er en privat variabel, og ikke en property)
+        {
+            //arrange
+            _uut.SetThreshold(14);
+
+            //act
+            var testThreshold = _uut.GetThreshold();
+
+            //assert
+            Assert.That(testThreshold, Is.EqualTo(14));
+        }
+
+        [Test]
         public void GetThresholdMethod_ThresholdIs23_MethodReturns23() //Vi tester her om metoden returnerer 23, hvis threshold er sat til 23
         {
             //arrange - arrange sker i setup linje 17. Her sættes threshold til 23
@@ -51,6 +64,16 @@ namespace ECSRefactoredTest
             //assert
             Assert.That(testThreshold, Is.EqualTo(23));
 
+        }
+
+        [Test]
+        public void RunSelfTestMethod_MethodReturnsTrue() //Vi tester her om metoden returnerer true
+        {
+            //arrange - sker i setup linje 17.
+
+            var testRunSelfTest = _uut.RunSelfTest();
+
+            Assert.That(testRunSelfTest, Is.True);
         }
     }
 }
