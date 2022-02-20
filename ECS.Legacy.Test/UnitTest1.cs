@@ -41,6 +41,20 @@ namespace ECSRefactoredTest
         }
 
         [Test]
+        public void regulateMethod_TempSensorReturns24_heaterTurnOff() // vi tester om heateren slukker, hvis TempSensor returnerer 24
+        {
+            //arrange
+            _fakeTempSensor.Temp = 24;
+
+            //act
+            _uut.Regulate();
+
+            //assert
+            Assert.That(_fakeHeater.TurnOffCounter,Is.EqualTo(1));
+
+        }
+
+        [Test]
         public void SetThresholdMethod_ThresholdIsSetTo14_GetThresholdMethodReturns14() //Vi tester om threshold bliver sat til 14, ved brug af Get-metoden (da threshold er en privat variabel, og ikke en property)
         {
             //arrange
@@ -89,6 +103,19 @@ namespace ECSRefactoredTest
 
             //assert
             Assert.That(_fakeHeater.TurnOffCounter, Is.EqualTo(1));
+
+        }
+        public void GetCurTempMethod_CurTempIs22_MethodReturns22()
+
+        {
+
+            //arrange sker i linje XX 
+
+            //act
+            var testCurTemp = _uut.GetCurTemp();
+
+            //assert
+            Assert.That(testCurTemp,Is.EqualTo(22));
         }
 
     }
