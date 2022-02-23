@@ -105,6 +105,7 @@ namespace ECSRefactoredTest
             Assert.That(_fakeHeater.TurnOffCounter, Is.EqualTo(1));
 
         }
+
         public void GetCurTempMethod_CurTempIs22_MethodReturns22()
 
         {
