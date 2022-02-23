@@ -105,12 +105,14 @@ namespace ECSRefactoredTest
             Assert.That(_fakeHeater.TurnOffCounter, Is.EqualTo(1));
 
         }
-
+        [Test]
         public void GetCurTempMethod_CurTempIs22_MethodReturns22()
 
         {
 
-            //arrange sker i linje XX 
+
+            //arrange
+            _fakeTempSensor.Temp = 22;
 
             //act
             var testCurTemp = _uut.GetCurTemp();
